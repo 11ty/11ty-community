@@ -10,11 +10,7 @@ body:
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
-  - type: input
-    id: url-source
-    attributes:
-      label: Source code URL
-      description: URL to the source code for this site (if open source)
-      placeholder: e.g. https://github.com/zachleat/zachleat.com
-    validations:
-      required: false
+  - type: markdown
+    value: |
+      We will spider your site to look for:
+      * a `<a href rel="source">` that links to the URL for the source code for this site (if open source).
