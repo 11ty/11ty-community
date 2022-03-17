@@ -1,4 +1,3 @@
----
 name: Built with Eleventy
 about: Show off your Built with Eleventy site on the Eleventy documentation
 title: "I built a site with Eleventy!"
@@ -21,6 +20,3 @@ body:
       placeholder: e.g. https://github.com/zachleat/zachleat.com
     validations:
       required: false
----
-
-
