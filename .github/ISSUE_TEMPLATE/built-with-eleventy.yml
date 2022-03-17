@@ -1,8 +1,6 @@
 name: Built with Eleventy
-about: Show off your Built with Eleventy site on the Eleventy documentation
-title: "I built a site with Eleventy!"
+description: Show off your Eleventy site on the Eleventy documentation
 labels: built-with-eleventy
-assignees: ''
 body:
   - type: input
     id: url
