@@ -2,7 +2,10 @@ name: Convert Issues to JSON Data
 
 on:
   issues:
-    types: opened
+    types:
+      - opened
+      - edited
+      - reopened
 
 jobs:
   update_library:
