@@ -1,6 +1,7 @@
 name: Convert Issues to JSON Data
 
 on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
   issues:
     types:
       - opened

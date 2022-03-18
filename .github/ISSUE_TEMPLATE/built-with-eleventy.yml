@@ -11,6 +11,13 @@ body:
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
+  - type: checkboxes
+    id: leaderboard_excluded
+    attributes:
+      label: Exclude from Leaderboards?
+      description: This site will be left off of the leaderboards
+      options:
+        - label: Excluded
   - type: markdown
     attributes:
       value: |
