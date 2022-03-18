@@ -15,7 +15,7 @@ body:
     attributes:
       label: Source code URL
       description: The URL for the source code for this site
-      placeholder: e.g. https://www.zachleat.com/
+      placeholder: e.g. https://github.com/zachleat/zachleat.com
     validations:
       required: false
   - type: textarea
