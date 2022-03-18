@@ -11,6 +11,10 @@ body:
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        Please take note that sites must include `Eleventy` in the `content` attribute of `<meta name="generator">` to be eligible for the leaderboards.
   - type: input
     id: source_url
     attributes:
@@ -27,6 +31,3 @@ body:
       placeholder: e.g. @zachleat, @pdehaan
     validations:
       required: false
-# - type: markdown
-#   attributes:
-#     value: |
