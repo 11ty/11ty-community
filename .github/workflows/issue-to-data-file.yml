@@ -14,10 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: GitHub Issue to JSON
-        uses: zachleat/github-issue-to-json-file@v2.0.2
+        uses: zachleat/github-issue-to-json-file@v3.0.0
         with:
           folder: "built-with-eleventy/"
           issue-template: "built-with-eleventy.yml"
+          hash-property-name: "url"
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
