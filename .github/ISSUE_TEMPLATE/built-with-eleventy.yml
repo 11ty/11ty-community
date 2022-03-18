@@ -14,7 +14,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please take note that sites must include `Eleventy` in the `content` attribute of `<meta name="generator">` to be eligible for the leaderboards.
+        Please note that site HTML must include a `<meta name="generator" content="Eleventy">` (or at least `Eleventy` somewhere in the `content` attribute) to be eligible for the leaderboards.
   - type: input
     id: source_url
     attributes:
