@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: GitHub Issue to JSON
-        uses: zachleat/github-issue-to-json-file@v3.0.3
+        uses: zachleat/github-issue-to-json-file@v3.0.4
         with:
           folder: "built-with-eleventy/"
           issue-template: "built-with-eleventy.yml"
