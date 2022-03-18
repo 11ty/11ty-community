@@ -10,14 +10,16 @@ Serve as the open source data store for:
 
 Require less data to be entered by the end user. Currently we have:
 
-1. `url`: Required
-1. `source_url`: Optional, keep it.
-1. `opened_by`: Autopopulated (new). The GitHub user that created the issue.
-1. `authors`: Optional, previously `authoredBy` (was additive, now an override). Fallback to `opened_by`.
-1. ~~`twitter`: Was required and the primary key, remove it.~~
-1. ~~`description`: Optional, remove it~~
-1. `business.cta`: [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) url
-1. `business.name`: [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) company name
+1. `url`: (required)
+1. `source_url`: (optional)
+1. `opened_by`: (autopopulated) The GitHub user that created the issue.
+1. `authors`: (optional) Previously `authoredBy` (was additive, now an override). Fallback to `opened_by`.
+1. `business_url`: (optional) Previously `business.cta`. The [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) url
+1. `business_name`: (optional) Previously `business.name`. The [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) company name
+1. ~~`twitter`: Was required and the primary key, removed~~
+1. ~~`description`: Optional, removed~~
+
+All URLs are normalized prior to JSON data file creation (via [`normalize-url`](https://www.npmjs.com/package/normalize-url) and [`follow-url-redirects`](https://www.npmjs.com/package/follow-url-redirects)).
 
 ### Stretch Goals:
 
