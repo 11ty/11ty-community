@@ -1,4 +1,4 @@
-# 11ty-community
+# `11ty-community`
 
 ## Goals
 
