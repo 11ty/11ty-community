@@ -38,3 +38,19 @@ body:
       placeholder: e.g. @zachleat, @pdehaan
     validations:
       required: false
+  - type: input
+    id: business_url
+    attributes:
+      label: Super Professional Business Network CTA URL
+      description: Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/)
+      placeholder: e.g. https://www.zachleat.com/
+    validations:
+      required: false
+  - type: input
+    id: business_name
+    attributes:
+      label: Super Professional Business Network Company Name
+      description: The company name used on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/)
+      placeholder: e.g. Zach’s Web Design Emporium
+    validations:
+      required: false

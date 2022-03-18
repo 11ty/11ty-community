@@ -16,6 +16,8 @@ Require less data to be entered by the end user. Currently we have:
 1. `authors`: Optional, previously `authoredBy` (was additive, now an override). Fallback to `opened_by`.
 1. ~~`twitter`: Was required and the primary key, remove it.~~
 1. ~~`description`: Optional, remove it~~
+1. `business.cta`: [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) url
+1. `business.name`: [Super Professional Business Network](https://www.11ty.dev/blog/espbn/) company name
 
 ### Stretch Goals:
 
