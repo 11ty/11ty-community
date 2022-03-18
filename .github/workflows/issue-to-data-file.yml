@@ -1,0 +1,28 @@
+name: Convert Issues to JSON Data
+
+on:
+  issues:
+    types: opened
+
+jobs:
+  update_library:
+    runs-on: macOS-latest
+    name: Convert New built-with-eleventy Issue to Sites Data
+    # only continue if issue has "built-with-eleventy" label
+    if: contains( github.event.issue.labels.*.name, 'built-with-eleventy')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: GitHub Issue to JSON
+        uses: zachleat/github-issue-to-json-file@v1.0.0
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "${{ env.WordleSummary }}"
+          git push
+      - name: Close issue
+        uses: peter-evans/close-issue@v1
+        with:
+          issue-number: "${{ env.IssueNumber }}"
+          comment: "Added ${{ env.WordleSummary }}"
