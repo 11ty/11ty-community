@@ -16,7 +16,7 @@ jobs:
       - name: GitHub Issue to JSON
         uses: zachleat/github-issue-to-json-file@v2.0.2
         with:
-          folder: "_data/sites/"
+          folder: "built-with-eleventy/"
           issue-template: "built-with-eleventy.yml"
       - name: Commit files
         run: |
