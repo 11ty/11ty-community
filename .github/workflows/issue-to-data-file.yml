@@ -19,7 +19,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -am "Adding data for #${{ env.IssueNumber }}"
+          git add *
+          git commit -m "Adding data for #${{ env.IssueNumber }}"
           git push
       - name: Close issue
         uses: peter-evans/close-issue@v1
