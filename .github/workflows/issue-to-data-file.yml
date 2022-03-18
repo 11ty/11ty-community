@@ -6,7 +6,7 @@ on:
 
 jobs:
   update_library:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     name: Convert New built-with-eleventy Issue to Sites Data
     # only continue if issue has "built-with-eleventy" label
     if: contains( github.event.issue.labels.*.name, 'built-with-eleventy')
