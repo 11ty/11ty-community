@@ -1,8 +1,8 @@
 name: Convert Issues to JSON Data
 
 on:
-  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
   issues:
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
     types:
       - opened
       - edited
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Convert New built-with-eleventy Issue to Sites Data
     # only continue if issue has "built-with-eleventy" label
-    # require moderator approval!
+    # require an `approved` label for moderation
     if: contains( github.event.issue.labels.*.name, 'built-with-eleventy') && contains( github.event.issue.labels.*.name, 'approved')
     steps:
       - name: Checkout
@@ -22,8 +22,11 @@ jobs:
       - name: GitHub Issue to JSON
         uses: zachleat/github-issue-to-json-file@v3.0.14
         with:
+          # This controls where the JSON files are generated
           folder: "built-with-eleventy/"
+          # This tells the action which GitHub Issue Form template file to use
           issue-template: "built-with-eleventy.yml"
+          # This controls which property we use to key the file name hash off of (values should be unique in your data set)
           hash-property-name: "url"
       - name: Commit files
         run: |
