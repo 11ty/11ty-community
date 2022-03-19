@@ -15,7 +15,7 @@ jobs:
     name: Convert New built-with-eleventy Issue to Sites Data
     # only continue if issue has "built-with-eleventy" label
     # require moderator approval!
-    if: contains( github.event.issue.labels.*.name, 'built-with-eleventy') || contains( github.event.issue.labels.*.name, 'approved')
+    if: contains( github.event.issue.labels.*.name, 'built-with-eleventy') && contains( github.event.issue.labels.*.name, 'approved')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
