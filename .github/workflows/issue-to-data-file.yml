@@ -13,10 +13,11 @@ jobs:
   update_library:
     runs-on: ubuntu-latest
     name: Convert New built-with-eleventy Issue to Sites Data
-    # only continue if issue has "built-with-eleventy" label
-    if: contains( github.event.issue.labels.*.name, 'built-with-eleventy')
-    # require moderator approval!
-    if: contains( github.event.issue.labels.*.name, 'approved')
+    if:
+      # only continue if issue has "built-with-eleventy" label
+      - contains( github.event.issue.labels.*.name, 'built-with-eleventy')
+      # require moderator approval!
+      - contains( github.event.issue.labels.*.name, 'approved')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
