@@ -1,5 +1,6 @@
 {
-  "url": "FAILED:::https://whatt2watch.netlify.app/",
+  "url": "https://whatt2watch.netlify.app/",
+  "disabled": true,
   "source_url": "https://github.com/tannerdolby/what-to-watch",
   "opened_by": "twitter:tannerdolby"
 }

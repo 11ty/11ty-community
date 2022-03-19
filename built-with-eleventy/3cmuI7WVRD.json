@@ -1,5 +1,6 @@
 {
-  "url": "FAILED:::https://stable.visual-framework.dev/",
+  "url": "https://stable.visual-framework.dev/",
+  "disabled": true,
   "source_url": "https://github.com/visual-framework/vf-core",
   "opened_by": "twitter:embl"
 }

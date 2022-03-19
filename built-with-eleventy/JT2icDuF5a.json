@@ -1,6 +1,6 @@
 {
   "url": "https://www.console.love/",
-  "failed": true,
+  "disabled": true,
   "source_url": "https://github.com/maeligg/console.love",
   "opened_by": "twitter:maelb"
 }

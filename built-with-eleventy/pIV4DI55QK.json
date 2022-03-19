@@ -1,6 +1,6 @@
 {
   "url": "https://davidkistauri.ru/",
-  "failed": true,
+  "disabled": true,
   "source_url": "https://github.com/dtroode/kistauri",
   "opened_by": "twitter:dtroode"
 }
