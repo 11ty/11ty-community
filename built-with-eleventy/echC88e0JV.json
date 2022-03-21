@@ -1,4 +1,8 @@
 {
   "url": "https://viljamis.com/",
-  "opened_by": "twitter:viljamis"
+  "opened_by": "viljamis",
+  "_backup_opened_by": "twitter:viljamis",
+  "authors": [
+    "twitter:viljamis"
+  ]
 }

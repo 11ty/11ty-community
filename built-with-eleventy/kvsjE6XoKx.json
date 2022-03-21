@@ -1,5 +1,9 @@
 {
   "url": "https://stanlemon.com/",
   "source_url": "https://github.com/stanlemon/stanlemon.github.com",
-  "opened_by": "twitter:stanlemon"
+  "opened_by": "stanlemon",
+  "_backup_opened_by": "twitter:stanlemon",
+  "authors": [
+    "twitter:stanlemon"
+  ]
 }

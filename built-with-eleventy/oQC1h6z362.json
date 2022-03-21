@@ -1,5 +1,6 @@
 {
   "url": "https://ghost-v3.netlify.app/",
   "source_url": "https://github.com/bauhouse/eleventy-starter-ghost",
-  "opened_by": "twitter:bauhouse"
+  "opened_by": "bauhouse",
+  "_backup_opened_by": "twitter:bauhouse"
 }

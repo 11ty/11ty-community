@@ -1,5 +1,9 @@
 {
   "url": "https://cassettenest.com/",
   "source_url": "https://github.com/trey/cn-marketing",
-  "opened_by": "twitter:cassettenest"
+  "opened_by": "trey",
+  "_backup_opened_by": "twitter:cassettenest",
+  "authors": [
+    "twitter:trey"
+  ]
 }

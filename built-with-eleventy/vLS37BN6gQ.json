@@ -1,5 +1,9 @@
 {
   "url": "https://doineedbuntingtoday.com/",
   "source_url": "https://github.com/CodeFoodPixels/doineedbuntingtoday",
-  "opened_by": "twitter:CodeFoodPixels"
+  "opened_by": "CodeFoodPixels",
+  "_backup_opened_by": "twitter:CodeFoodPixels",
+  "authors": [
+    "twitter:CodeFoodPixels"
+  ]
 }

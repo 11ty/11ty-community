@@ -1,5 +1,9 @@
 {
   "url": "https://radenpioneer.netlify.app/",
   "source_url": "https://github.com/radenpioneer/blog",
-  "opened_by": "twitter:radenpioneer"
+  "opened_by": "radenpioneer",
+  "_backup_opened_by": "twitter:radenpioneer",
+  "authors": [
+    "twitter:radenpioneer"
+  ]
 }

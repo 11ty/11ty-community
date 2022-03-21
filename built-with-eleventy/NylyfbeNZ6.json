@@ -1,5 +1,7 @@
 {
   "url": "https://surajjadhav.me/",
+  "disabled": true,
   "source_url": "https://github.com/surajjdhv/surajjdhv.github.io",
-  "opened_by": "twitter:surajsjdhv"
+  "opened_by": "surajjdhv",
+  "_backup_opened_by": "twitter:surajsjdhv"
 }

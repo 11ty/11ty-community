@@ -1,5 +1,10 @@
 {
   "url": "https://www.embl.org/",
   "source_url": "https://gitlab.ebi.ac.uk/users/sign_in",
-  "opened_by": "twitter:embl"
+  "opened_by": "khawkins98",
+  "_backup_opened_by": "twitter:embl",
+  "authors": [
+    "twitter:khawkins98",
+    "twitter:StuRobson"
+  ]
 }

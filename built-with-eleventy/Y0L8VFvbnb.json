@@ -1,5 +1,9 @@
 {
   "url": "https://chromeos.dev/en",
-  "opened_by": "twitter:ChromiumDev",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:ChromiumDev",
+  "authors": [
+    "twitter:Snugug"
+  ],
   "featured": true
 }

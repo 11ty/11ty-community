@@ -1,4 +1,9 @@
 {
   "url": "https://chromatic.live/",
-  "opened_by": "twitter:ChromaticHQ"
+  "opened_by": "markdorison",
+  "_backup_opened_by": "twitter:ChromaticHQ",
+  "authors": [
+    "twitter:markdorison",
+    "twitter:agarzola"
+  ]
 }

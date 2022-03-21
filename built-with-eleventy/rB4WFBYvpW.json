@@ -1,4 +1,8 @@
 {
   "url": "https://www.lautakuntapodcast.fi/",
-  "source_url": "https://github.com/msaari/lautakunta.fi"
+  "source_url": "https://github.com/msaari/lautakunta.fi",
+  "opened_by": "msaari",
+  "authors": [
+    "twitter:msaari"
+  ]
 }

@@ -1,5 +1,9 @@
 {
   "url": "https://omnisurface-stars.com/",
   "source_url": "https://github.com/superterrific/omnisurface-stars",
-  "opened_by": "twitter:superterrific"
+  "opened_by": "superterrific",
+  "_backup_opened_by": "twitter:superterrific",
+  "authors": [
+    "twitter:superterrific"
+  ]
 }

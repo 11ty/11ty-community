@@ -1,6 +1,18 @@
 {
   "url": "https://www.a11yproject.com/",
-  "opened_by": "twitter:A11YProject",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:A11YProject",
+  "authors": [
+    "twitter:cariefisher",
+    "twitter:DroidPinkman",
+    "twitter:ericwbailey",
+    "twitter:nullwhere",
+    "twitter:juryjowns",
+    "twitter:Saptak013",
+    "twitter:svinkle",
+    "twitter:TatianaTMac",
+    "twitter:esjay"
+  ],
   "featured": true,
   "superfeatured": true
 }

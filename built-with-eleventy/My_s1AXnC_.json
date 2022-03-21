@@ -1,5 +1,10 @@
 {
   "url": "https://fylgja.dev/",
   "source_url": "https://github.com/fylgja/site",
-  "opened_by": "twitter:FylgjaDev"
+  "opened_by": "GrimLink",
+  "_backup_opened_by": "twitter:FylgjaDev",
+  "authors": [
+    "twitter:grimlink",
+    "twitter:allrude"
+  ]
 }

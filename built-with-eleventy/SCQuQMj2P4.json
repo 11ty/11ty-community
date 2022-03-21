@@ -1,5 +1,9 @@
 {
   "url": "https://treylabs.com/",
   "source_url": "https://github.com/trey/treylabs",
-  "opened_by": "twitter:treylabs"
+  "opened_by": "trey",
+  "_backup_opened_by": "twitter:treylabs",
+  "authors": [
+    "twitter:trey"
+  ]
 }

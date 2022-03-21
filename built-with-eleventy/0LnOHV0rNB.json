@@ -1,5 +1,7 @@
 {
   "url": "https://code-blocks.surge.sh/",
+  "disabled": true,
   "source_url": "https://github.com/idris-maps/code-blocks/tree/master/site",
-  "opened_by": "twitter:idrismaps"
+  "opened_by": "idris-maps",
+  "_backup_opened_by": "twitter:idrismaps"
 }

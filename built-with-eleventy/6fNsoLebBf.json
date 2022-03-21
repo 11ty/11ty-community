@@ -1,5 +1,9 @@
 {
   "url": "https://jawgrind.com/",
   "source_url": "https://github.com/trey/jawgrind",
-  "opened_by": "twitter:jawgrind"
+  "opened_by": "trey",
+  "_backup_opened_by": "twitter:jawgrind",
+  "authors": [
+    "twitter:trey"
+  ]
 }

@@ -1,5 +1,9 @@
 {
   "url": "https://11tycolorpicker.netlify.app/",
   "source_url": "https://github.com/tannerdolby/eleventy-color-picker",
-  "opened_by": "twitter:tannerdolby"
+  "opened_by": "tannerdolby",
+  "_backup_opened_by": "twitter:tannerdolby",
+  "authors": [
+    "twitter:tannerdolby"
+  ]
 }

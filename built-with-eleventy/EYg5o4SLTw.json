@@ -1,4 +1,8 @@
 {
   "url": "https://www.frede.io/",
-  "source_url": "https://gitlab.com/users/sign_in"
+  "source_url": "https://gitlab.com/users/sign_in",
+  "opened_by": "stefanfrede",
+  "authors": [
+    "twitter:stefanfrede"
+  ]
 }

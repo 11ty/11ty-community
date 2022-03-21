@@ -1,6 +1,11 @@
 {
   "url": "https://www.netlify.com/",
-  "opened_by": "twitter:netlify",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:netlify",
+  "authors": [
+    "twitter:huguestennier",
+    "twitter:zachleat"
+  ],
   "featured": true,
   "superfeatured": true
 }

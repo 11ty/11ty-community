@@ -1,5 +1,9 @@
 {
   "url": "https://davidrhoden.com/",
   "source_url": "https://github.com/davidrhoden/davidrhoden-basic-netlify",
-  "opened_by": "twitter:davidrhoden"
+  "opened_by": "davidrhoden",
+  "_backup_opened_by": "twitter:davidrhoden",
+  "authors": [
+    "twitter:davidrhoden"
+  ]
 }

@@ -1,5 +1,9 @@
 {
   "url": "https://dogsof.dev/",
   "source_url": "https://github.com/peruvianidol/dogsofdev",
-  "opened_by": "twitter:peruvianidol"
+  "opened_by": "peruvianidol",
+  "_backup_opened_by": "twitter:peruvianidol",
+  "authors": [
+    "twitter:peruvianidol"
+  ]
 }

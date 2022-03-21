@@ -1,7 +1,8 @@
 {
   "url": "https://eslint.org/",
   "source_url": "https://github.com/eslint/website/tree/master",
-  "opened_by": "twitter:geteslint",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:geteslint",
   "featured": true,
   "superfeatured": true
 }

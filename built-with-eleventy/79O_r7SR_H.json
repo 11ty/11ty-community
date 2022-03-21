@@ -1,5 +1,9 @@
 {
   "url": "https://tactile.co.za/",
   "source_url": "https://github.com/ndorfin/tactile-www",
-  "opened_by": "twitter:ndorfin"
+  "opened_by": "ndorfin",
+  "_backup_opened_by": "twitter:ndorfin",
+  "authors": [
+    "twitter:ndorfin"
+  ]
 }

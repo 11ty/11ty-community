@@ -1,5 +1,10 @@
 {
   "url": "https://www.filamentgroup.com/",
-  "opened_by": "twitter:filamentgroup",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:filamentgroup",
+  "authors": [
+    "twitter:zachleat",
+    "twitter:scottjehl"
+  ],
   "featured": true
 }

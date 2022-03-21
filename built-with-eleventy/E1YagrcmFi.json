@@ -1,6 +1,6 @@
 {
   "url": "https://whatt2watch.netlify.app/",
-  "disabled": true,
   "source_url": "https://github.com/tannerdolby/what-to-watch",
-  "opened_by": "twitter:tannerdolby"
+  "opened_by": "tannerdolby",
+  "_backup_opened_by": "twitter:tannerdolby"
 }

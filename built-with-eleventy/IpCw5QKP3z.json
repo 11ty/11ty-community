@@ -1,5 +1,10 @@
 {
   "url": "https://every-layout.dev/",
-  "opened_by": "twitter:layoutplusplus",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:layoutplusplus",
+  "authors": [
+    "twitter:piccalilli_",
+    "twitter:heydonworks"
+  ],
   "featured": true
 }

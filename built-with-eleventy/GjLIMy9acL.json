@@ -1,5 +1,9 @@
 {
   "url": "https://chocolatesculptress.com/",
   "source_url": "https://github.com/smccracken/chocolatesculptress.com",
-  "opened_by": "twitter:chocosculptress"
+  "opened_by": "smccracken",
+  "_backup_opened_by": "twitter:chocosculptress",
+  "authors": [
+    "twitter:scottmccracken"
+  ]
 }

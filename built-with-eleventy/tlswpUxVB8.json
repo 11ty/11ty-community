@@ -1,7 +1,11 @@
 {
   "url": "https://v8.dev/",
   "source_url": "https://github.com/v8/v8.dev",
-  "opened_by": "twitter:v8js",
+  "opened_by": "zachleat",
+  "_backup_opened_by": "twitter:v8js",
+  "authors": [
+    "twitter:mathias"
+  ],
   "featured": true,
   "superfeatured": true
 }

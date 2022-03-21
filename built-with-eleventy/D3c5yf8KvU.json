@@ -1,5 +1,9 @@
 {
   "url": "https://achteintel.org/",
   "source_url": "https://github.com/achteintel/website",
-  "opened_by": "twitter:achteintel"
+  "opened_by": "deponeWD",
+  "_backup_opened_by": "twitter:achteintel",
+  "authors": [
+    "twitter:depone"
+  ]
 }

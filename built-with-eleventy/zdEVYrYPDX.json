@@ -1,5 +1,9 @@
 {
   "url": "https://11tytailwindjit.netlify.app/",
   "source_url": "https://github.com/kkgthb/11ty-tailwind-jit",
-  "opened_by": "twitter:KatieKodes"
+  "opened_by": "kkgthb",
+  "_backup_opened_by": "twitter:KatieKodes",
+  "authors": [
+    "twitter:MDarrik"
+  ]
 }

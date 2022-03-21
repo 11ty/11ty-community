@@ -1,5 +1,12 @@
 {
   "url": "https://fumes.junglestar.org/",
   "source_url": "https://github.com/fumes/fumes.11ty",
-  "opened_by": "twitter:fumesvoice"
+  "opened_by": "gabbersepp",
+  "_backup_opened_by": "twitter:fumesvoice",
+  "authors": [
+    "twitter:rokmatwit",
+    "twitter:lance_slabbert",
+    "twitter:alejandroplesch",
+    "twitter:fumesvoice"
+  ]
 }

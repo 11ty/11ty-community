@@ -1,5 +1,11 @@
 {
   "url": "https://www.tilt-studio.fr/",
   "source_url": "https://bitbucket.org/account/signin/%3Fnext=/tiltstudio/tilt-studio.fr/src/master",
-  "opened_by": "twitter:hteumeuleu"
+  "opened_by": "hteumeuleu",
+  "_backup_opened_by": "twitter:hteumeuleu",
+  "authors": [
+    "twitter:hteumeuleu",
+    "twitter:NicolasFlorian",
+    "twitter:FrBmt"
+  ]
 }

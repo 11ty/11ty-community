@@ -1,5 +1,9 @@
 {
   "url": "https://austinjavascript.com/",
   "source_url": "https://github.com/austinjavascript/austinjavascript.com",
-  "opened_by": "twitter:austinjs"
+  "opened_by": "stedman",
+  "_backup_opened_by": "twitter:austinjs",
+  "authors": [
+    "twitter:stedman"
+  ]
 }
