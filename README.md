@@ -19,7 +19,7 @@ Require less data to be entered by the end user. Currently we have:
 1. ~~`twitter`: Was required and the primary key, removed~~
 1. ~~`description`: Optional, removed~~
 
-All URLs are normalized prior to JSON data file creation (via [`normalize-url`](https://www.npmjs.com/package/normalize-url) and [`follow-url-redirects`](https://www.npmjs.com/package/follow-url-redirects)).
+All URLs must be  normalized prior to JSON data file creation (via [`normalize-url`](https://www.npmjs.com/package/normalize-url) and [`follow-url-redirects`](https://www.npmjs.com/package/follow-url-redirects)).
 
 ### Stretch Goals:
 
