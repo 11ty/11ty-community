@@ -1,9 +1,10 @@
 {
   "url": "https://everydayia.com/",
   "source_url": "https://github.com/Wilto/perfimages/tree/everydayIA",
-  "opened_by": "csakiistvan",
-  "_backup_opened_by": "twitter:redsesame",
+  "_backup_opened_by": "csakiistvan",
+  "opened_by": "wilto",
   "authors": [
-    "twitter:wilto"
+    "wilto",
+		"twitter:redsesame"
   ]
 }

@@ -2,8 +2,6 @@
   "url": "https://darn.es/",
   "opened_by": "daviddarnes",
   "_backup_opened_by": "twitter:daviddarnes",
-  "authors": [
-    "twitter:daviddarnes"
-  ],
-  "business_url": "https://darn.es/#contact"
+  "business_url": "https://darn.es/#contact",
+	"business_name": "David Darnes"
 }

@@ -3,7 +3,8 @@
   "opened_by": "snugug",
   "_backup_opened_by": "twitter:ChromiumDev",
   "authors": [
-    "twitter:Snugug"
+		"snugug",
+		"twitter:ChromiumDev"
   ],
   "featured": true
 }
