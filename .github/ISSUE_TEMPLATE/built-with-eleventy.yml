@@ -39,6 +39,14 @@ body:
     validations:
       required: false
   - type: input
+    id: opencollective
+    attributes:
+      label: Open Collective Username
+      description: This marks you as a supporter on the docs. Shown in the URL of your Open Collective profile URL.
+      placeholder: e.g. zachleat
+    validations:
+      required: false
+  - type: input
     id: business_url
     attributes:
       label: Super Professional Business Network CTA URL
