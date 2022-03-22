@@ -11,17 +11,10 @@ body:
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
-  - type: checkboxes
-    id: leaderboard_excluded
-    attributes:
-      label: Exclude from Leaderboards?
-      description: This site will be left off of the leaderboards
-      options:
-        - label: Excluded
   - type: markdown
     attributes:
       value: |
-        Please note that site HTML must include a `<meta name="generator" content="Eleventy">` (or at least `Eleventy` somewhere in the `content` attribute) to be eligible for the leaderboards.
+        Please note that site HTML must now include a `<meta name="generator" content="Eleventy">` (or at least `Eleventy` somewhere in the `content` attribute) to be eligible for the Eleventy Leaderboards.
   - type: input
     id: source_url
     attributes:
@@ -34,7 +27,7 @@ body:
     id: authors
     attributes:
       label: Authors (GitHub usernames)
-      description: Leave this empty if you are the only author. If this has a value, make sure to include yourself in the list (if applicable!)
+      description: "_Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list!"
       placeholder: e.g. @zachleat, @pdehaan
     validations:
       required: false
