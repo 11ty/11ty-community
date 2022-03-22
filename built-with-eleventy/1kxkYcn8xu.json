@@ -1,6 +1,10 @@
 {
   "url": "https://joshcrain.io/",
+  "leaderboard_excluded": false,
   "source_url": "https://github.com/joshcrain/joshcrain.io",
-  "opened_by": "joshcrain",
-  "_backup_opened_by": "twitter:thejoshcrain"
+  "authors": [],
+  "opencollective": "joshcrain",
+  "business_url": "https://joshcrain.io/",
+  "business_name": "Josh Crain",
+  "opened_by": "joshcrain"
 }
