@@ -3,11 +3,15 @@ description: Show off your Eleventy site on the Eleventy documentation
 title: "[Built with Eleventy] I built something!"
 labels: built-with-eleventy
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the site URL is required. All other fields are optional.
   - type: input
     id: url
     attributes:
       label: Site URL
-      description: The home page of the live web site you built
+      description: The home page of the live web site you built. _[parser:url]_
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
@@ -19,15 +23,15 @@ body:
     id: source_url
     attributes:
       label: Source code URL
-      description: The URL for the source code for this site
+      description: "The URL for the source code for this site. _[parser:url]_"
       placeholder: e.g. https://github.com/zachleat/zachleat.com
     validations:
       required: false
   - type: textarea
     id: authors
     attributes:
-      label: Authors (GitHub usernames)
-      description: "_Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list!"
+      label: "Authors (GitHub usernames)"
+      description: "_Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list! _[parser:usernames]_"
       placeholder: e.g. @zachleat, @pdehaan
     validations:
       required: false
@@ -43,7 +47,7 @@ body:
     id: business_url
     attributes:
       label: Super Professional Business Network CTA URL
-      description: Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/)
+      description: "Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/). _[parser:url]_"
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: false
