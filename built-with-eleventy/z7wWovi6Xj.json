@@ -1,5 +1,11 @@
 {
   "url": "https://bram.is/",
-  "opened_by": "bramsmulders",
-  "_backup_opened_by": "twitter:bramsmulders"
+  "source_url": "",
+  "authors": [
+    "bramsmulders"
+  ],
+  "opencollective": "",
+  "business_url": "https://bram.is/available/",
+  "business_name": "bram.is - Front-end UI developer",
+  "opened_by": "bramsmulders"
 }
