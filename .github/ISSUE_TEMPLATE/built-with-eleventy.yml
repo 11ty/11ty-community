@@ -23,7 +23,7 @@ body:
     id: source_url
     attributes:
       label: Source code URL
-      description: "The URL for the source code for this site. _[parser:url]_"
+      description: "Optional: The URL to the **public** repository for the source code for this site. _[parser:url]_"
       placeholder: e.g. https://github.com/zachleat/zachleat.com
     validations:
       required: false
@@ -31,7 +31,7 @@ body:
     id: authors
     attributes:
       label: "Authors (GitHub usernames)"
-      description: "_Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list! _[parser:usernames]_"
+      description: "Optional: _Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list! _[parser:usernames]_"
       placeholder: e.g. @zachleat, @pdehaan
     validations:
       required: false
@@ -39,7 +39,7 @@ body:
     id: opencollective
     attributes:
       label: Open Collective Username
-      description: This marks you as a supporter on the docs. Shown in the URL of your Open Collective profile URL.
+      description: "Optional: This marks you as a supporter on the docs. Shown in the URL of your Open Collective profile URL."
       placeholder: e.g. zachleat
     validations:
       required: false
@@ -47,7 +47,7 @@ body:
     id: business_url
     attributes:
       label: Super Professional Business Network CTA URL
-      description: "Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/). _[parser:url]_"
+      description: "Optional: Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/). Requires a valid Open Collective Username above._[parser:url]_"
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: false
@@ -55,7 +55,7 @@ body:
     id: business_name
     attributes:
       label: Super Professional Business Network Company Name
-      description: The company name used on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/)
+      description: "Optional: The company name used on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/)"
       placeholder: e.g. Zach’s Web Design Emporium
     validations:
       required: false
