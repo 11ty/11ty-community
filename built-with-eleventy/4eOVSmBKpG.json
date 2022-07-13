@@ -1,8 +1,9 @@
 {
   "url": "https://birkscinema.co.uk/",
-  "leaderboard_excluded": false,
   "source_url": "",
-  "authors": [],
+  "authors": [
+    "brettdewoody"
+  ],
   "opencollective": "",
   "business_url": "",
   "business_name": "",
