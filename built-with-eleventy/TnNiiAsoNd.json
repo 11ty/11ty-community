@@ -1,9 +1,11 @@
 {
   "url": "https://iamdtms.hu/",
-  "source_url": "https://github.com/iamdtms/iamdtms-eleventy",
-  "authors": [],
-  "opencollective": "iamdtms",
-  "business_url": "",
-  "business_name": "",
+  "source_url": "https://github.com/iamdtms/iamdtms.hu",
+  "authors": [
+    "iamdtms"
+  ],
+  "opencollective": "@iamdtms",
+  "business_url": "https://iamdtms.hu/",
+  "business_name": "iamdtms (Dohány Tamás)",
   "opened_by": "iamdtms"
 }
