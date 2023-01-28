@@ -6,5 +6,6 @@
 		"snugug",
 		"twitter:ChromiumDev"
   ],
-  "featured": true
+  "featured": true,
+  "superfeatured": true
 }
