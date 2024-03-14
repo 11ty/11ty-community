@@ -2,7 +2,7 @@
 
 This repo is the open source data set for Built With Eleventy sites, used for:
 
-  * [Eleventy Authors](https://www.11ty.dev/authors/) 
+  * [Eleventy Authors](https://www.11ty.dev/authors/)
   * [Eleventy Leaderboards](https://www.11ty.dev/speedlify/)
 
 ## [Did you build something? Please add it!](https://github.com/11ty/11ty-community/issues/new/choose)
@@ -24,4 +24,3 @@ This repo is the open source data set for Built With Eleventy sites, used for:
   * [Community Resources](https://www.11ty.dev/docs/getting-started/#continue-learning) (and [migrate Data](https://github.com/11ty/11ty-website/tree/master/src/_data/community))
   * Demos (and [migrate Data](https://github.com/11ty/11ty-website/tree/master/src/_data/demos))
 * Use a bookmarking service APIs to populate entries
-* Use Twitter hashtag API search query to populate entries
