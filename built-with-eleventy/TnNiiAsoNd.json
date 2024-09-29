@@ -1,11 +1,11 @@
 {
   "url": "https://iamdtms.hu/",
-  "source_url": "https://github.com/iamdtms/iamdtms.hu",
+  "source_url": "",
   "authors": [
-    "iamdtms"
+    "[@iamdtms](https://github.com/iamdtms)"
   ],
   "opencollective": "",
-  "business_url": "https://iamdtms.hu/",
-  "business_name": "iamdtms (Dohány Tamás)",
+  "business_url": "",
+  "business_name": "Personal landing page of iamdtms.",
   "opened_by": "iamdtms"
 }
