@@ -1,6 +1,7 @@
 {
   "url": "https://khanacademyannualreport.org/",
-  "disabled": true,
+  "archived": "https://web.archive.org/web/20210814183008/https://khanacademyannualreport.org/",
   "opened_by": "twitter:khanacademy",
-  "_backup_opened_by": "twitter:khanacademy"
+  "_backup_opened_by": "twitter:khanacademy",
+  "disabled": true
 }
