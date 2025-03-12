@@ -1,6 +1,6 @@
 name: Built with Eleventy
 description: Show off your Eleventy site on the Eleventy documentation
-title: ""
+title: "example.com"
 labels: built-with-eleventy
 body:
   - type: markdown
@@ -12,7 +12,7 @@ body:
     attributes:
       label: Site URL
       description: The home page of the live web site you built. _[parser:url]_
-      placeholder: e.g. https://www.zachleat.com/
+      placeholder: e.g. https://example.com/
     validations:
       required: true
   - type: markdown
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Source code URL
       description: "Optional: The URL to the **public** repository for the source code for this site. _[parser:url]_"
-      placeholder: e.g. https://github.com/zachleat/zachleat.com
+      placeholder: e.g. https://github.com/zachleat/example.com
     validations:
       required: false
   - type: textarea
@@ -48,7 +48,7 @@ body:
     attributes:
       label: Super Professional Business Network CTA URL
       description: "Optional: Open Collective Members can be featured on the [Eleventy Super Professional Business Network](https://www.11ty.dev/super-professional-business-network/). Requires a valid Open Collective Username above._[parser:url]_"
-      placeholder: e.g. https://www.zachleat.com/
+      placeholder: e.g. https://example.com/
     validations:
       required: false
   - type: input
