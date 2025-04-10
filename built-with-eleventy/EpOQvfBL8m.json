@@ -1,7 +1,9 @@
 {
   "url": "https://whoistheorchid.com/",
-  "source_url": "https://github.com/jgarber623/whoistheorchid.com",
-  "opened_by": "jgarber623",
-  "_backup_opened_by": "twitter:jgarber",
-  "authors": []
+  "source_url": "https://codeberg.org/jgarber/whoistheorchid.com",
+  "authors": [],
+  "opencollective": "jgarber",
+  "business_url": "",
+  "business_name": "",
+  "opened_by": "jgarber623"
 }
