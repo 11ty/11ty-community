@@ -35,8 +35,7 @@ jobs:
           git add *
           git commit -m "Adding data file for #${{ env.IssueNumber }}"
           git push
-      - name: Close issue
-        uses: peter-evans/close-issue@v1
-        with:
-          issue-number: "${{ env.IssueNumber }}"
-          comment: "Thank you! Your data file has been added!"
+      - name: Close Issue
+        run: gh issue close --comment "Thank you! Your data file has been added!" "${{ env.IssueNumber }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
