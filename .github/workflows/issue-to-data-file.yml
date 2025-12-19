@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: GitHub Issue to JSON
-        uses: zachleat/github-issue-to-json-file@v6.0.1
+        uses: zachleat/github-issue-to-json-file@v6.0.2
         with:
           # This controls where the JSON files are generated
           folder: "built-with-eleventy/"
