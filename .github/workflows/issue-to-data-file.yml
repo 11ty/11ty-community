@@ -30,8 +30,8 @@ jobs:
           hash-property-name: "url"
       - name: Commit files
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add *
           git commit -m "Adding data file for #${{ env.IssueNumber }}"
           git push
