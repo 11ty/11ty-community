@@ -1,0 +1,83 @@
+name: Validate Built-with-Eleventy Submission
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+      - labeled
+
+# Only the issue under test is touched; we comment and (re)label it.
+permissions:
+  issues: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Auto-check submitted site for an Eleventy signal
+    # Run for built-with-eleventy submissions, but skip once a maintainer has
+    # already approved it (the data-file workflow handles those).
+    if: >
+      contains(github.event.issue.labels.*.name, 'built-with-eleventy') &&
+      !contains(github.event.issue.labels.*.name, 'approved')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Detect Eleventy signal
+        id: detect
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: node .github/scripts/validate-built-with-eleventy.mjs
+
+      - name: Comment results and update label
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const tier = '${{ steps.detect.outputs.tier }}';
+            const marker = '<!-- eleventy-validator -->';
+            const body = fs.readFileSync('comment.md', 'utf8');
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            // --- Upsert a single validator comment (no spam on edits) ---
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner, repo, issue_number, per_page: 100,
+            });
+            const existing = comments.find(
+              (c) => c.user.type === 'Bot' && c.body && c.body.includes(marker)
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
+
+            // --- Swap validation label (verified vs needs-verification) ---
+            const VERIFIED = 'eleventy-verified';
+            const NEEDS = 'needs-verification';
+            const want = tier === 'pass' ? VERIFIED : NEEDS;
+            const drop = tier === 'pass' ? NEEDS : VERIFIED;
+
+            const labelMeta = {
+              [VERIFIED]: { color: '0e8a16', description: 'Auto-check found an Eleventy generator meta tag' },
+              [NEEDS]:    { color: 'fbca04', description: 'Auto-check could not confirm Eleventy; needs a human look' },
+            };
+            // Ensure the label exists (no-op if it already does).
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: want });
+            } catch {
+              await github.rest.issues.createLabel({ owner, repo, name: want, ...labelMeta[want] });
+            }
+
+            const current = (context.payload.issue.labels || []).map((l) => l.name);
+            if (current.includes(drop)) {
+              await github.rest.issues.removeLabel({ owner, repo, issue_number, name: drop })
+                .catch(() => {});
+            }
+            if (!current.includes(want)) {
+              await github.rest.issues.addLabels({ owner, repo, issue_number, labels: [want] });
+            }
