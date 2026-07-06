@@ -1,0 +1,108 @@
+name: Validate Built-with-Eleventy Submission
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+      - labeled
+
+permissions:
+  issues: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    if: >
+      contains(github.event.issue.labels.*.name, 'built-with-eleventy') &&
+      !contains(github.event.issue.labels.*.name, 'approved')
+    steps:
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const ENDPOINT = "https://v1.generator.11ty.dev/json/";
+            const MARKER = "<!-- eleventy-validator -->";
+
+            function firstUrl(text) {
+              const m = (text || "").match(/https?:\/\/[^\s)>"'`]+/i);
+              return m ? m[0] : "";
+            }
+
+            function parseIssueForm(body) {
+              const fields = {};
+              const re = /^###[ \t]+(.+?)[ \t]*\r?\n+([\s\S]*?)(?=\r?\n###[ \t]+|$)/gm;
+              let m;
+              while ((m = re.exec(body)) !== null) {
+                const v = m[2].trim();
+                if (!/^_?no response_?$/i.test(v)) fields[m[1].trim()] = v;
+              }
+              return fields;
+            }
+
+            async function check(siteUrl) {
+              const controller = new AbortController();
+              const timer = setTimeout(() => controller.abort(), 15000);
+              try {
+                const res = await fetch(`${ENDPOINT}${encodeURIComponent(siteUrl)}/`, {
+                  redirect: "follow", signal: controller.signal,
+                  headers: { Accept: "application/json" },
+                });
+                let data;
+                try { data = JSON.parse(await res.text()); } catch { data = null; }
+
+                if (data?.generator) {
+                  return data.generator.toLowerCase().startsWith("eleventy")
+                    ? { tier: "pass", msg: `✅ Verified — \`${data.generator}\`.` }
+                    : { tier: "fail", msg: `❌ Site uses \`${data.generator}\`, not Eleventy.` };
+                }
+                if (data?.error && /<meta\b/i.test(data.error))
+                  return { tier: "fail", msg: "❌ No `<meta name=\"generator\">` tag found on the site." };
+                if (data?.error)
+                  return { tier: "fail", msg: `⚠️ ${data.error}` };
+                return { tier: "fail", msg: "⚠️ Could not determine the site's generator." };
+              } catch (err) {
+                const msg = err.name === "AbortError" ? "timed out" : err.message;
+                return { tier: "fail", msg: `⚠️ Generator service unreachable (${msg}).` };
+              } finally {
+                clearTimeout(timer);
+              }
+            }
+
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            const fields = parseIssueForm(context.payload.issue.body || "");
+            const siteUrl = firstUrl(fields["Site URL"]) || firstUrl(context.payload.issue.title);
+
+            const result = siteUrl
+              ? await check(siteUrl)
+              : { tier: "fail", msg: "⚠️ No site URL found in this issue." };
+
+            const body = `${MARKER}\n${result.msg}\n`;
+
+            const comments = await github.paginate(github.rest.issues.listComments,
+              { owner, repo, issue_number, per_page: 100 });
+            const existing = comments.find(c => c.user.type === "Bot" && c.body?.includes(MARKER));
+            if (existing)
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            else
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+
+            const VERIFIED = "eleventy-verified";
+            const NEEDS = "needs-verification";
+            const want = result.tier === "pass" ? VERIFIED : NEEDS;
+            const drop = result.tier === "pass" ? NEEDS : VERIFIED;
+
+            const labelMeta = {
+              [VERIFIED]: { color: "0e8a16", description: "Auto-check found an Eleventy generator meta tag" },
+              [NEEDS]:    { color: "fbca04", description: "Auto-check could not confirm Eleventy; needs a human look" },
+            };
+            try { await github.rest.issues.getLabel({ owner, repo, name: want }); }
+            catch { await github.rest.issues.createLabel({ owner, repo, name: want, ...labelMeta[want] }); }
+
+            const current = (context.payload.issue.labels || []).map(l => l.name);
+            if (current.includes(drop))
+              await github.rest.issues.removeLabel({ owner, repo, issue_number, name: drop }).catch(() => {});
+            if (!current.includes(want))
+              await github.rest.issues.addLabels({ owner, repo, issue_number, labels: [want] });
