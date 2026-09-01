@@ -1,11 +1,7 @@
 {
-  "url": "https://tw.11ty.blades.ninja/",
-  "source_url": "https://github.com/anyblades/buildawesome-starters",
-  "authors": [
-    "anydigital",
-    "anyblades",
-    "tonystar"
-  ],
+  "url": "https://tailwind.buildawesome.one/",
+  "source_url": "https://github.com/buildawesome-one/examples",
+  "authors": ["buildawesome-one"],
   "opencollective": "",
   "business_url": "",
   "business_name": "",
