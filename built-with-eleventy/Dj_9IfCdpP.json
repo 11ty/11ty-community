@@ -1,11 +1,7 @@
 {
   "url": "https://blades.ninja/",
-  "source_url": "https://github.com/anyblades/blades.ninja",
-  "authors": [
-    "anydigital",
-    "anyblades",
-    "tonystar"
-  ],
+  "source_url": "",
+  "authors": ["anydigital", "buildawesome-one"],
   "opencollective": "",
   "business_url": "",
   "business_name": "",
