@@ -54,7 +54,7 @@ let { ok, message } = await check(getSiteUrl(issue.body));
 let body = `${MARKER}\n${message}`;
 
 let comments = await api(`/${issue.number}/comments?per_page=100`);
-let existing = comments.find(c => c.body?.includes(MARKER));
+let existing = comments.find(c => c.user.login === "github-actions[bot]" && c.body?.includes(MARKER));
 if(existing) {
 	await api(`/comments/${existing.id}`, "PATCH", { body });
 } else {
