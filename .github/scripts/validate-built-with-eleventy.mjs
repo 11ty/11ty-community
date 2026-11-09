@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { parseIssueBody } from "./parse-issue-body.mjs";
 
 const MARKER = "<!-- eleventy-validator -->";
 const VERIFIED = "eleventy-verified";
@@ -23,8 +24,8 @@ async function api(path, method = "GET", body) {
 	return res.json();
 }
 
-function getSiteUrl(body = "") {
-	let value = body.match(/^### Site URL\s+(\S+)/m)?.[1];
+function getSiteUrl(body) {
+	let value = parseIssueBody(body)["Site URL"];
 	return URL.canParse(value) ? value : undefined;
 }
 
@@ -39,7 +40,9 @@ async function check(url) {
 		});
 		let { generator } = await res.json();
 		if(generator?.toLowerCase().includes("eleventy")) {
-			return { ok: true, message: `✅ Found an Eleventy generator: \`${generator}\`` };
+			// Markdown and @mentions are inert inside a code span, so only backticks and newlines need removing.
+			let safe = generator.replace(/[`\r\n]/g, "").slice(0, 100);
+			return { ok: true, message: `✅ Found an Eleventy generator: \`${safe}\`` };
 		}
 		return { ok: false, message: "❌ No `<meta name=\"generator\" content=\"Eleventy\">` found on the site." };
 	} catch(e) {
