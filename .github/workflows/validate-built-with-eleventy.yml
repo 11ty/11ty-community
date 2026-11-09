@@ -1,0 +1,26 @@
+name: Validate Built with Eleventy Submission
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: validate-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'built-with-eleventy') && !contains(github.event.issue.labels.*.name, 'approved')
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: node .github/scripts/validate-built-with-eleventy.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
